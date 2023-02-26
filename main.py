@@ -1,10 +1,13 @@
 import random
+print('''Welcome to Craps game''')
 def roll():
+    '''This method does not take any arguments and simply rolls the dice!'''
     dice_1 = random.randrange(1,7)
     dice_2 = random.randrange(1,7)
     return(dice_1,dice_2)
 
 def dice(dice):
+    '''This method shows us the sum of the dice!'''
     dice_1,dice_2 = dice
     print("the sum is {} + {} = {}".format(dice_1,dice_2,sum(dice)))
 
@@ -21,6 +24,7 @@ while True:
         break
     else:
         goal = sum_of_dice
+        print ('Your new gloal number is ', goal)
         while True:
             New_Roll = roll()
             dice(New_Roll)
